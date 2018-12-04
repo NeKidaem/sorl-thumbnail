@@ -47,7 +47,7 @@ class GaussianBlur(ImageFilter.Filter):
 
 class Engine(EngineBase):
     def get_image(self, source):
-        buffer = BufferIO(source.read(mode='rb'))
+        buffer = BufferIO(read(source, 'rb'))
         return Image.open(buffer)
 
     def get_image_size(self, image):
